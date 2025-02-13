@@ -19,10 +19,23 @@
   gtag('config', 'AW-16606245730');
 </script>
 
-	<!-- Event snippet for Vista de una página conversion page -->
+	<!-- Event snippet for Vista de una página conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
 <script>
-  gtag('event', 'conversion', {'send_to': 'AW-16606245730/5p_yCNaf7LkZEOLmvO49'});
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-16606245730/5p_yCNaf7LkZEOLmvO49',
+      'event_callback': callback
+  });
+  return false;
+}
 </script>
+
                 
 <title>Monitorear WhatsApp - Clonar WhatsApp 2024</title>
 <meta name="description" content="Espiar Conversaciones de WhatsApp es posible, gracias a nuestra herramienta podrás hackear cualquier whatsapp online y sin problemas ni encuestas.">
